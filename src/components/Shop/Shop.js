@@ -16,8 +16,10 @@ const Shop = () => {
     }
 
     return (
+
         <div className='shop_Container'>
             {/* Product Aria */}
+            <h1>Hello </h1>
             <div className='products_Container'>
                 {
                     products.map(product =>
