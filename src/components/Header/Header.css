@@ -1,0 +1,22 @@
+.header_Navigation{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 80px;    
+    background: #1C2B35;
+    padding-left: 140px;
+    padding-right: 140px;
+}
+.header_Navigation a{
+    text-decoration: none;
+    color: whitesmoke;
+    font-size: 17px;
+    font-weight: 600;
+    margin-left: 36px;
+}
+.header_Navigation a:hover{
+    color: orange;
+}
+.header_Navigation img{
+    cursor: pointer;
+}
