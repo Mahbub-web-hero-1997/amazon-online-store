@@ -13,10 +13,7 @@
 .card_Container{
     background: #FF9900;
     height: 100%;
-    padding: 20px;
-    position: fixed;
-    right: 30px;
-    text-align: left;   
+   
 }
  
 @media screen and (max-width:1100px) {

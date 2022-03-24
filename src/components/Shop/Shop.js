@@ -34,7 +34,7 @@ const Shop = () => {
             {/* Cart Arid */}
             <div className='card_Container'>
                 <Cart
-                    cart={cart.length}></Cart>
+                    cart={cart}></Cart>
             </div>
         </div>
     );
