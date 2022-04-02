@@ -1,28 +1,22 @@
 import React, { useEffect, useState } from 'react';
-import { addToDb, storedCart } from '../../utilities/fakedb';
+import { Link } from 'react-router-dom';
+import useProducts from '../../hooks/useProducts';
+import { addToDb, getStoredCart } from '../../utilities/fakedb';
 import Cart from '../Card/Cart';
 import Product from '../Product/Product';
 import './Shop.css'
 
 const Shop = () => {
-    const [products, setProducts] = useState([]);
+    const [products, setProducts] = useProducts()
     const [cart, setCart] = useState([])
     useEffect(() => {
-        fetch('products.json')
-            .then(res => res.json())
-            .then(data => {
-                setProducts(data)
-            })
-    }, []);
-
-    useEffect(() => {
-        const getStoredCart = storedCart();
+        const storedCart = getStoredCart();
 
         const savedCart = []
-        for (const id in getStoredCart) {
+        for (const id in storedCart) {
             const addedProduct = products.find(product => product.id === id)
             if (addedProduct) {
-                const quantity = getStoredCart[id];
+                const quantity = storedCart[id];
                 addedProduct.quantity = quantity;
                 savedCart.push(addedProduct);
             }
@@ -31,11 +25,6 @@ const Shop = () => {
 
     }, [products])
 
-    // const handleAddToCart = (product) => {
-    //     const newCart = [...cart, product];
-    //     setCart(newCart)
-    //     addToDb(product.id)
-    // }
     const handleAddToCart = (selectedProduct) => {
         let newCart = [];
         const exists = cart.find(product => product.id === selectedProduct.id);
@@ -69,9 +58,13 @@ const Shop = () => {
                 }
             </div>
             {/* Cart Arid */}
-            <div className='card_Container'>
+            <div className='cart_Container'>
                 <Cart
-                    cart={cart}></Cart>
+                    cart={cart}>
+                    <Link to='/orders'>
+                        <button>Review-Order</button>
+                    </Link>
+                </Cart>
             </div>
         </div>
     );
