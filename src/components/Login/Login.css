@@ -1,0 +1,70 @@
+.form_Container {
+    width: 600px;
+    border: 1px solid #95A0a7;
+    box-sizing: border-box;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.form_Title {
+    font-size: 35px;
+    font-weight: 400;
+    color: #2A414F;
+}
+
+.input_Group {
+    margin-bottom: 20px;
+}
+
+.input_Group label {
+    display: block;
+    margin-left: 5px;
+}
+
+.input_Group input {
+    width: 415px;
+    height: 55px;
+    font-size: 24px;
+    border: 1px solid #95A0a7;
+    box-sizing: border-box;
+    border-radius: 5px;
+}
+
+.from_Submit {
+    width: 415px;
+    height: 55px;
+    background: rgba(255, 153, 0, 0.3);
+    border-radius: 5px;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.form_Link {
+    color: rgba(255, 153, 0, 0.817);
+    text-decoration: none;
+    margin-left: 5px;
+}
+
+.google_SignIn {
+    width: 415px;
+    height: 55px;
+    font-size: 20px;
+    color: #2A414F;
+    border: 1px solid #95A0a7;
+    border-radius: 5px;
+    letter-spacing: 1px;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+}
+
+.google_SignIn img {
+    position: absolute;
+    padding-left: 10px;
+    width: 10%;
+    top: 6px;
+    left: 0;
+}
