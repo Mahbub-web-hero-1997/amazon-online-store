@@ -29,7 +29,7 @@ const Orders = () => {
             </div>
             <div className="cart_Container">
                 <Cart cart={cart}>
-                    <Link to='#'><button>Prosed Checkout</button></Link>
+                    <Link to='/shipment'><button>Prosed shipment</button></Link>
                 </Cart>
             </div>
         </div>
