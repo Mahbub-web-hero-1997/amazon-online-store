@@ -21,7 +21,7 @@ const Header = () => {
                 <Link to="/Inventory">Inventory</Link>
                 <Link to="/About">About</Link>
                 {
-                    user ? <button onClick={handleSignOut}>Sign out</button> :
+                    user ? <Link onClick={handleSignOut} to='/login'>LogOut</Link> :
                         <Link to='/login'>Login</Link>}
             </div>
         </nav >

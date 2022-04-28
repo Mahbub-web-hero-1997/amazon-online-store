@@ -4,6 +4,7 @@ import useProducts from '../../hooks/useProducts';
 import { addToDb, getStoredCart } from '../../utilities/fakedb';
 import Cart from '../Card/Cart';
 import Product from '../Product/Product';
+import UseTitle from '../useTitle/UseTitle';
 import './Shop.css'
 
 const Shop = () => {
@@ -42,10 +43,9 @@ const Shop = () => {
     }
 
     return (
-
         <div className='shop_Container'>
+            <UseTitle title="shop"></UseTitle>
             {/* Product Aria */}
-
             <div className='products_Container'>
                 {
                     products.map(product =>

@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import auth from '../../firebase.init';
+import UseTitle from '../useTitle/UseTitle';
 
 
 const Signup = () => {
@@ -11,9 +12,6 @@ const Signup = () => {
     const [error, setError] = useState('')
     const [createUserWithEmailAndPassword, user] = useCreateUserWithEmailAndPassword(auth)
     const navigate = useNavigate()
-
-
-
     const handleEmailBlur = event => {
         // console.log(event.target.value);
         setEmail(event.target.value)
@@ -48,6 +46,7 @@ const Signup = () => {
 
     return (
         <div className='form_Container'>
+            <UseTitle title="signup"></UseTitle>
             <div>
                 <h2 className='form_Title'>Signup</h2>
                 <form onSubmit={handleCreateUser} action="">

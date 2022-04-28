@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { useNavigate } from 'react-router-dom';
 import auth from '../../firebase.init';
+import UseTitle from '../useTitle/UseTitle';
 
 const Shipment = () => {
     const [user] = useAuthState(auth)
@@ -36,6 +37,7 @@ const Shipment = () => {
     }
     return (
         <div className='form_Container'>
+            <UseTitle title="shipment"></UseTitle>
             <div>
                 <h2 className='form_Title'>Shipping Information</h2>
                 <form onSubmit={handleCreateUser} action="">
@@ -53,7 +55,7 @@ const Shipment = () => {
                     </div>
                     <div className="input_Group">
                         <label htmlFor="number">Phone Number</label>
-                        <input onBlur={handlePhoneBlur} required type="number" name="number" id="" required placeholder='+8801' />
+                        <input onBlur={handlePhoneBlur} required type="number" name="number" id="" placeholder='+8801' />
                     </div>
                     <p style={{ color: "red" }}>{error}</p>
                     <input className='from_Submit' type="submit" value="Add Shipping" />
